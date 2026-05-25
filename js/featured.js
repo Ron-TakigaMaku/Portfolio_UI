@@ -1,6 +1,5 @@
 // ====== index.html ======
 const featuredList = document.querySelector('.featured__list')
-const featuredCounter = document.querySelector('.featured__counter')
 const resumeBtn = document.querySelector('.hero__btn')
 const navLinks = document.querySelectorAll('.header__link')
 let featured = [
@@ -26,21 +25,28 @@ let featured = [
 		date: '27 Feb 2026',
 		description:
 			'This project showcases my frontend skills in layout building and visual consistency. I paid special attention to spacing,typography, and responsive behavior across devices.',
-		img: 'img/about__img3.png',
+		img: 'img/about_img3.png',
 	},
 ]
 
 // ===== CARD TEMPLATE =====
 function createFeaturedCard(item) {
 	return `
-		<div class="featured-card">
-			<img class="card__img" src="${item.img}" alt="${item.title}" />
+		<div class="works__work">
+			<div class="works__img">
+				<img src="${item.img}" alt="${item.title}" />
+			</div>
 
-			<h2 class="card__title">${item.title}</h2>
-			<p class="card__desc">${item.description || ''}</p>
+			<div class="works__content">
+				<h2 class="works__title">${item.title}</h2>
 
-			<div class="card__bottom">
-				<span class="card__date">${item.date}</span>
+				<div class="works__date">
+					${item.date}
+				</div>
+
+				<p class="works__text">
+					${item.description || ''}
+				</p>
 
 				<button class="card__btn">
 					View project
@@ -55,10 +61,6 @@ function renderFeatured() {
 	if (!featuredList) return
 
 	featuredList.innerHTML = featured.map(createFeaturedCard).join('')
-
-	if (featuredCounter) {
-		featuredCounter.textContent = `Featured: ${featured.length}`
-	}
 }
 
 renderFeatured()
@@ -67,7 +69,7 @@ renderFeatured()
 featuredList.addEventListener('click', e => {
 	const cardBtn = e.target.closest('.card__btn')
 	if (!cardBtn) return
-	const card = cardBtn.closest('.card')
-	const title = card.querySelector('.card__title').textContent
+	const card = cardBtn.closest('.works__work')
+	const title = card.querySelector('.works__title').textContent
 	alert(`You clicked on ${title}`)
 })
