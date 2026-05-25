@@ -121,7 +121,7 @@ ul {
 }
 .recent {
 	padding: 13px 0;
-	background-color: #edf7fa;
+	background-color: var(--white);
 	&__container {
 		align-items: center;
 		display: flex;
@@ -149,7 +149,7 @@ ul {
 }
 .about {
 	padding: 13px 0 39px 0;
-	background-color: #edf7fa;
+	background-color: var(--white);
 	&__container {
 		align-items: center;
 		display: flex;
@@ -161,116 +161,83 @@ ul {
 }
 .featured {
 	padding: 30px 0;
-
 	&__container {
 		display: flex;
 		flex-direction: column;
 	}
-
 	&__title {
 		margin-bottom: 40px;
-
 		font-size: 32px;
 		font-weight: 700;
-
 		text-transform: uppercase;
 	}
 }
-
 .works {
 	&__container {
 		display: flex;
 		flex-direction: column;
-
 		gap: 50px;
 	}
-
 	&__work {
 		align-items: flex-start;
 		display: flex;
-
 		padding-bottom: 40px;
-
 		border-bottom: 1px solid #e0e0e0;
-
 		gap: 30px;
 	}
-
 	&__img {
 		overflow: hidden;
-		height: 180px;
-
-		width: 250px;
-
+		height: 250px;
+		width: 180px;
 		border-radius: 12px;
 		flex-shrink: 0;
-
 		img {
 			display: block;
 			height: 100%;
 			width: 100%;
-
 			object-fit: cover;
 		}
 	}
-
 	&__content {
 		align-items: flex-start;
 		display: flex;
 		flex-direction: column;
-
 		gap: 20px;
-
 		flex: 1;
 	}
-
 	&__title {
 		font-size: 32px;
 		font-weight: 700;
-
 		text-transform: uppercase;
 	}
-
 	&__date {
 		align-items: center;
 		display: inline-flex;
 		justify-content: center;
-
 		padding: 10px 20px;
-		color: #fff;
-
+		color: var(--white);
 		font-size: 16px;
 		font-weight: 700;
-
-		background: #1d2554;
-
+		background: var(--dark);
 		border-radius: 30px;
 	}
-
 	&__text {
-		color: #444;
+		color: var(--dark);
 		font-size: 18px;
 		line-height: 1.6;
 	}
-
-	.card__btn {
-		padding: 12px 20px;
-		color: #fff;
-
-		font-size: 14px;
-		font-weight: 600;
-
-		background: #111827;
-
-		border: none;
-		border-radius: 10px;
-
-		transition: background 0.3s ease;
-
-		cursor: pointer;
-
-		&:hover {
-			background: #2b354f;
+	&__work {
+		.card__btn {
+			padding: 14px 20px;
+			color: var(--white);
+			font-size: 16px;
+			background: var(--primary-color);
+			border: none;
+			border-radius: 12px;
+			cursor: pointer;
+			&:hover {
+				background: var(--secondary-color);
+			}
 		}
 	}
 }
