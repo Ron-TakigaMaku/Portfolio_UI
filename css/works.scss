@@ -92,9 +92,10 @@ ul {
 	}
 	&__img {
 		overflow: hidden;
-		height: 220px;
-		width: 246px;
+		height: 250px;
+		width: 180px;
 		border-radius: 12px;
+		flex-shrink: 0;
 		img {
 			display: block;
 			height: 100%;
