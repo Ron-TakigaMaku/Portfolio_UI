@@ -15,6 +15,17 @@ featuredList.addEventListener('click', e => {
 	modal.style.display = 'flex'
 })
 
+// heroList.addEventListener('click', e => {
+// 	const cardBtn = e.target.closest('.card__btn')
+// 	if (!cardBtn) return
+// 	const id = Number(cardBtn.dataset.id)
+// 	const project = hero.find(item => item.id === id) // ← ищем в hero
+// 	if (!project) return
+// 	modalTitle.textContent = project.title
+// 	modalText.textContent = project.description
+// 	modal.style.display = 'flex'
+// })
+
 // Закрытие модалки по кнопке X
 modalClose.addEventListener('click', () => {
 	modal.style.display = 'none'

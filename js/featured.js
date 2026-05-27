@@ -27,6 +27,7 @@ let featured = [
 	},
 ]
 
+// ===== CARD TEMPLATE =====
 function createFeaturedCard(item) {
 	return `
     <div class="works__work">
@@ -43,8 +44,10 @@ function createFeaturedCard(item) {
   `
 }
 
+// ===== RENDER CARDS =====
 function renderFeatured() {
 	if (!featuredList) return
 	featuredList.innerHTML = featured.map(createFeaturedCard).join('')
 }
+
 renderFeatured()
