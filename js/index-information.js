@@ -23,9 +23,7 @@ function createAboutCard(item) {
 	return `
 		<div class="about__block">
 			<h2 class= "about__block-info">${item.title}</h2>
-
 			<h3 class="about__block-date">${item.date}</h3>
-
 			<p class="about__text">${item.description || ''}
 			</p>
 		</div>
@@ -35,7 +33,6 @@ function createAboutCard(item) {
 // ===== RENDER CARDS =====
 function renderAbout() {
 	if (!aboutContainer) return
-
 	aboutContainer.innerHTML = about.map(createAboutCard).join('')
 }
 
@@ -44,10 +41,7 @@ renderAbout()
 // ===== EVENT CARDS INFO =====
 aboutContainer.addEventListener('click', e => {
 	const block = e.target.closest('.about__block')
-
 	if (!block) return
-
 	const title = block.querySelector('.about__block-info').textContent
-
 	alert(`You clicked on ${title}`)
 })
