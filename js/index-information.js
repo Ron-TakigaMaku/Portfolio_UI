@@ -43,15 +43,11 @@ renderAbout()
 
 // ===== EVENT CARDS INFO =====
 aboutContainer.addEventListener('click', e => {
-	if (aboutContainer) {
-		aboutContainer.addEventListener('click', e => {
-			const block = e.target.closest('.about__block')
+	const block = e.target.closest('.about__block')
 
-			if (!block) return
+	if (!block) return
 
-			const title = block.querySelector('.about__block-info').textContent
+	const title = block.querySelector('.about__block-info').textContent
 
-			alert(`You clicked on ${title}`)
-		})
-	}
+	alert(`You clicked on ${title}`)
 })
