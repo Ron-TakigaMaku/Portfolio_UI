@@ -39,9 +39,6 @@ function renderAbout() {
 renderAbout()
 
 // ===== EVENT CARDS INFO =====
-aboutContainer.addEventListener('click', e => {
-	const block = e.target.closest('.about__block')
-	if (!block) return
-	const title = block.querySelector('.about__block-info').textContent
-	alert(`You clicked on ${title}`)
-})
+// Небольшая правка: отключаем глобальный обработчик клика по карточкам
+// чтобы текст внутри Information не имитировал клик по кнопке.
+// Если нужна интерактивность — добавим целевые кнопки и отдельные обработчики.
