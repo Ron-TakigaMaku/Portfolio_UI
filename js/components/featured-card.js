@@ -1,5 +1,3 @@
-// js/components/featured-card.js
-
 export function createFeaturedCard(item) {
 	return `
     <div class="works__work">
