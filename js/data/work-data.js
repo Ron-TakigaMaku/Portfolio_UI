@@ -1,8 +1,4 @@
-// ====== works.html ======
-const worksContainer = document.querySelector('.works__container')
-const navLinks = document.querySelectorAll('.header__link')
-
-let works = [
+export const works = [
 	{
 		id: 1,
 		title: 'Trainee frontend',
@@ -36,44 +32,3 @@ let works = [
 		img: '../img/hero__img4.png',
 	},
 ]
-
-// ===== CARD TEMPLATE =====
-function createWorkCard(item) {
-	return `
-		<div class="works__work">
-			<div class="works__img">
-				<img src="${item.img}" alt="${item.title}" />
-			</div>
-
-			<div class="works__content">
-				<h2 class="works__title">${item.title}</h2>
-
-				<div class="works__date">
-					${item.date}
-				</div>
-
-				<p class="works__text">
-					${item.description || ''}
-				</p>
-			</div>
-		</div>
-	`
-}
-
-// ===== RENDER CARDS =====
-function renderWorks() {
-	if (!worksContainer) return
-
-	worksContainer.innerHTML = works.map(createWorkCard).join('')
-}
-
-renderWorks()
-
-// ===== EVENT CARDS INFO =====
-worksContainer.addEventListener('click', e => {
-	const cardBtn = e.target.closest('.card__btn')
-	if (!cardBtn) return
-	const card = cardBtn.closest('.works__work')
-	const title = card.querySelector('.works__title').textContent
-	alert(`You clicked on ${title}`)
-})

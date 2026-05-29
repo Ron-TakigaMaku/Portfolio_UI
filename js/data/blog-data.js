@@ -1,7 +1,4 @@
-//  ====== blog.html ======
-const blogContainer = document.querySelector('.blog__container')
-
-let blog = [
+export const blog = [
 	{
 		id: 1,
 		title: 'How I Started My Frontend Journey',
@@ -31,40 +28,3 @@ let blog = [
 			'My current goal is to strengthen my frontend fundamentals and move toward JavaScript and frameworks. I aim tomore real-world projects,improve my problem-sskills, anexperience working withcomponent-based inteand interactive features.',
 	},
 ]
-
-// ===== CARD TEMPLATE =====
-function createBlogCard(item) {
-	return `
-		<div class="blog__post">
-
-			<div class="blog__content">
-				<h2 class="blog__title">${item.title}</h2>
-
-				<div class="blog__date">
-					${item.date}
-				</div>
-
-				<p class="blog__text">
-					${item.description || ''}
-				</p>
-			</div>
-		</div>
-	`
-}
-
-// ===== RENDER CARDS =====
-function renderBlog() {
-	if (!blogContainer) return
-
-	blogContainer.innerHTML = blog.map(createBlogCard).join('')
-}
-
-renderBlog()
-
-blogContainer.addEventListener('click', e => {
-	const cardBtn = e.target.closest('.blog__btn')
-	if (!cardBtn) return
-	const card = cardBtn.closest('.blog__container')
-	const title = card.querySelector('.blog__title').textContent
-	alert(`You clicked on ${title}`)
-})
