@@ -4,10 +4,14 @@ import { initFeatured } from './modules/featured/render-featured.js'
 import { initHeroModal } from './modules/hero/hero-modal.js'
 import { initHero } from './modules/hero/render-hero.js'
 
+import { initAbout } from './modules/information/render-information.js'
+
 document.addEventListener('DOMContentLoaded', () => {
 	initFeatured()
 	initFeaturedModal()
 
 	initHero()
 	initHeroModal()
+
+	initAbout()
 })
