@@ -96,7 +96,7 @@ ul {
 		font-size: 16px;
 		background: #ff6464;
 		border: none;
-		border-radius: 2px;
+		border-radius: 12px;
 		cursor: pointer;
 		&:hover {
 			background: var(--secondary-color);
@@ -182,7 +182,6 @@ ul {
 		align-items: flex-start;
 		display: flex;
 		padding-bottom: 40px;
-		// border-bottom: 1px solid #e0e0e0;
 		gap: 30px;
 	}
 	&__img {

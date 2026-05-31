@@ -67,6 +67,19 @@ ul {
 	font-size: 30px;
 	font-weight: 700;
 }
+.recent__btn {
+	margin: 0 16px 0 16px;
+	padding: 14px 28px;
+	color: #fff;
+	font-size: 16px;
+	background: #ff6464;
+	border: none;
+	border-radius: 12px;
+	cursor: pointer;
+	&:hover {
+		background: var(--secondary-color);
+	}
+}
 .works {
 	&__work {
 		align-items: flex-start;
