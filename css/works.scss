@@ -68,7 +68,7 @@ ul {
 	font-weight: 700;
 }
 .recent__btn {
-	margin: 0 16px 0 16px;
+	margin: 0 16px;
 	padding: 14px 28px;
 	color: #fff;
 	font-size: 16px;
@@ -77,8 +77,13 @@ ul {
 	border-radius: 12px;
 	cursor: pointer;
 	&:hover {
-		background: var(--secondary-color);
+		background: var(--dark);
 	}
+}
+.recent__btn.active {
+	padding: 10px 24px;
+	font-size: 20px;
+	background: var(--secondary-color);
 }
 .works {
 	&__work {
