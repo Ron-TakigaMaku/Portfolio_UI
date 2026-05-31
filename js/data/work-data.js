@@ -3,7 +3,7 @@ export const works = [
 		id: 1,
 		title: 'CRM Dashboard Panel',
 		date: ' 21 Feb 2026',
-		category: ' dashboard',
+		category: 'dashboard',
 		description:
 			'A modern dashboard interface designed with a focus on clarity,hierarchy, and responsiveness. The project demonstrates my ability to structure layouts, work with UI components, and adapt designs for different screen sizes.',
 		img: '../img/about__img1.png',
@@ -12,7 +12,7 @@ export const works = [
 		id: 2,
 		title: 'Product Landing',
 		date: ' 26 Feb 2026',
-		category: ' landing',
+		category: 'landing',
 		description:
 			'This project showcases my frontend skills in layout building andvisual consistency.special attention to spacing,typography, and resbehavior across devices.',
 		img: '../img/about__img2.png',
@@ -21,7 +21,7 @@ export const works = [
 		id: 3,
 		title: 'Market Place',
 		date: ' 27 Feb 2026',
-		category: 'e-commerce',
+		category: 'ecommerce',
 		description:
 			'This project showcases my frontend skills in layout building andvisual consistency.special attention to spacing,typography, and resbehavior across devices.',
 		img: '../img/work__img3.png',
