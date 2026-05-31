@@ -61,24 +61,13 @@ ul {
 		}
 	}
 }
-.recent {
-	padding: 13px 0 36px 0;
-	&__container {
-		align-items: center;
-		display: flex;
-		justify-content: space-between;
-	}
-	&__content {
-		max-width: 700px;
-	}
-	&__subtitle {
-		margin: auto;
-		font-size: 44px;
-		font-weight: 900;
-	}
+.recent__subtitle {
+	margin-bottom: 24px;
+	color: var(--dark);
+	font-size: 30px;
+	font-weight: 700;
 }
 .works {
-	padding: 22px 0;
 	&__work {
 		align-items: flex-start;
 		display: flex;
