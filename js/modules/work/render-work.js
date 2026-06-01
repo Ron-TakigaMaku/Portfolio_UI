@@ -9,6 +9,7 @@ export function initWorks() {
 
 	renderWorks(works)
 
+	// FILTER BTNS
 	categoryButtons.forEach(button => {
 		button.addEventListener('click', () => {
 			const category = button.dataset.category
@@ -24,6 +25,7 @@ export function initWorks() {
 		})
 	})
 
+	// CREATE CARDS
 	function renderWorks(data) {
 		worksContainer.innerHTML = data.map(createWorkCard).join('')
 	}
